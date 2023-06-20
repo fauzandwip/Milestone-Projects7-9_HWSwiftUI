@@ -8,55 +8,62 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var activities = [
-        Activity(activityName: "Morning Wake Up", description: "Wake up at 3 am, then salat tahajud, pray, study and salat subuh", countTime: 0),
-        Activity(activityName: "Morning Wake", description: "Wake up at 3 am, then salat tahajud, pray, study and salat subuh", countTime: 2)
-    ]
+    @StateObject private var habits = Habits()
+    @State private var showAddHabitView = false
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(activities, id: \.activityName) { activity in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(activity.activityName)
-                                .font(.headline)
-                            Text(activity.description)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                                .lineLimit(1)
-                        }
-                        
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        
-                        VStack {
-                            Text("\(activity.countTime)")
-                                .font(.title3.bold())
-                                .foregroundColor(activity.countTime > 0 ? .green : .red)
-                            Text(activity.countTime > 1 ? "Times" : "Time")
-                                .font(.caption)
+            ZStack {
+                Color.gray
+                
+                if !habits.items.isEmpty {
+                    List {
+                        ForEach(habits.items) { habit in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(habit.habitName)
+                                        .font(.headline)
+                                    Text(habit.description)
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                        .lineLimit(1)
+                                }
+                                
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                
+                                VStack {
+                                    Text("\(habit.completedTime)")
+                                        .font(.title3.bold())
+                                        .foregroundColor(habit.completedTime > 0 ? .green : .red)
+                                    Text(habit.completedTime > 1 ? "Times" : "Time")
+                                        .font(.caption)
+                                }
+                            }
+                            .padding()
+                            .background(.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.gray)
                         }
                     }
-                    .padding()
-                    .background(.black)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.gray)
+                    .listStyle(.plain)
                 }
             }
-            .listStyle(.plain)
             .navigationTitle("Habits Track")
             .background(.gray)
-            //            .preferredColorScheme(.dark)
+            .preferredColorScheme(.dark)
             .toolbar {
-                NavigationLink {
-                    AddHabitView()
+                Button {
+                    showAddHabitView = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $showAddHabitView) {
+                AddHabitView(habits: habits)
             }
         }
         .accentColor(Color.primary)
