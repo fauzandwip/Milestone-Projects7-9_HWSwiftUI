@@ -35,13 +35,13 @@ struct ContentView: View {
                         VStack {
                             Text("\(activity.countTime)")
                                 .font(.title3.bold())
-                                .foregroundColor(activity.countTime > 0 ? .green : .orange)
+                                .foregroundColor(activity.countTime > 0 ? .green : .red)
                             Text(activity.countTime > 1 ? "Times" : "Time")
                                 .font(.caption)
                         }
                     }
                     .padding()
-                    .background(.purple)
+                    .background(.black)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.gray)
@@ -52,9 +52,14 @@ struct ContentView: View {
             .background(.gray)
             //            .preferredColorScheme(.dark)
             .toolbar {
-                Image(systemName: "plus")
+                NavigationLink {
+                    AddHabitView()
+                } label: {
+                    Image(systemName: "plus")
+                }
             }
         }
+        .accentColor(Color.primary)
     }
 }
 

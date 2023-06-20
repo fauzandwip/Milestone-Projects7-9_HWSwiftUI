@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4BD47E2A41B52600BDE2AD /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */; };
 		7B4C7DB62A39E30900C4F3C5 /* Habit_TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */; };
 		7B4C7DB82A39E30900C4F3C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */; };
 		7B4C7DBA2A39E30A00C4F3C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB92A39E30A00C4F3C5 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		7B4C7DB22A39E30900C4F3C5 /* Habit Track.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Track.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackApp.swift; sourceTree = "<group>"; };
 		7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +36,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B4BD47C2A41B4FE00BDE2AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */,
+				7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7B4C7DA92A39E30900C4F3C5 = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +66,7 @@
 			children = (
 				7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */,
 				7B4C7DC52A39E3FA00C4F3C5 /* Model */,
-				7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */,
+				7B4BD47C2A41B4FE00BDE2AD /* View */,
 				7B4C7DB92A39E30A00C4F3C5 /* Assets.xcassets */,
 				7B4C7DBB2A39E30A00C4F3C5 /* Preview Content */,
 			);
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4C7DC42A39E3C300C4F3C5 /* Activity.swift in Sources */,
+				7B4BD47E2A41B52600BDE2AD /* AddHabitView.swift in Sources */,
 				7B4C7DB82A39E30900C4F3C5 /* ContentView.swift in Sources */,
 				7B4C7DB62A39E30900C4F3C5 /* Habit_TrackApp.swift in Sources */,
 			);
