@@ -21,6 +21,8 @@ struct AddHabitView: View {
                 Form {
                     Section {
                         TextField("habitName", text: $habitName)
+                            .font(.title3.bold())
+                            .foregroundColor(.yellow)
                         
                         TextField("description", text: $description)
                     }
@@ -33,7 +35,7 @@ struct AddHabitView: View {
                 
                 Button("SAVE") {
                     let habit = Habit(habitName: habitName, description: description, completedTime: completedTime)
-                    habits.habitsActivity.insert(habit, at: 0)
+                    habits.add(habit: habit)
                     dismiss()
                 }
                 .saveButton()

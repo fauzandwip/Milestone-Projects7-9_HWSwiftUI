@@ -34,6 +34,11 @@ class Habits: ObservableObject {
         self.habitsActivity = []
     }
     
+    func add(habit: Habit) {
+        habitsActivity.append(habit)
+        sortHabits()
+    }
+    
     
     func getIndex(habitID: UUID) -> Int {
         if let index = habitsActivity.firstIndex(where: { $0.id == habitID }) {
@@ -41,5 +46,9 @@ class Habits: ObservableObject {
         } else {
             return 0
         }
+    }
+    
+    func sortHabits() {
+        habitsActivity.sort(by: { $0.date > $1.date })
     }
 }

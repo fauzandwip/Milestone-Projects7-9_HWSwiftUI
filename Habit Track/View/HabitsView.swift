@@ -52,6 +52,9 @@ struct HabitsView: View {
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.gray)
                         }
+                        .onDelete { offsets in
+                            self.habits.habitsActivity.remove(atOffsets: offsets)
+                        }
                     }
                     .listStyle(.plain)
                 }

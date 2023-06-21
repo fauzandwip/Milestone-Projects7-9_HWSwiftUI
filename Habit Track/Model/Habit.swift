@@ -9,7 +9,17 @@ import Foundation
 
 struct Habit: Identifiable, Codable {
     var id = UUID()
-    let habitName: String
-    let description: String
-    var completedTime: Int
+    var habitName: String {
+        didSet { date = Date() }
+    }
+    
+    var description: String {
+        didSet { date = Date() }
+    }
+    
+    var completedTime: Int {
+        didSet { date = Date() }
+    }
+    
+    var date = Date()
 }

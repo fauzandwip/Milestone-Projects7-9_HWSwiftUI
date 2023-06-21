@@ -45,6 +45,9 @@ struct EditHabitView: View {
             .navigationTitle("Edit Habit")
             .background(.gray)
             .preferredColorScheme(.dark)
+            .onDisappear {
+                habits.sortHabits()
+            }
         }
     }
 }
