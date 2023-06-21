@@ -16,9 +16,9 @@ struct HabitsView: View {
             ZStack {
                 Color.gray
                 
-                if !habits.items.isEmpty {
+                if !habits.habitsActivity.isEmpty {
                     List {
-                        ForEach(habits.items) { habit in
+                        ForEach(habits.habitsActivity) { habit in
                             NavigationLink {
                                 EditHabitView(habits: habits, habitID: habit.id)
                             } label: {

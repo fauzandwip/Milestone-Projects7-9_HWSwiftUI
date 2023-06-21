@@ -33,7 +33,7 @@ struct AddHabitView: View {
                 
                 Button("SAVE") {
                     let habit = Habit(habitName: habitName, description: description, completedTime: completedTime)
-                    habits.items.insert(habit, at: 0)
+                    habits.habitsActivity.insert(habit, at: 0)
                     dismiss()
                 }
                 .saveButton()

@@ -12,7 +12,7 @@ struct EditHabitView: View {
     
     private var index: Int
     private var habit: Habit {
-        habits.items[index]
+        habits.habitsActivity[index]
     }
     
     init(habits: Habits, habitID: UUID) {
@@ -35,7 +35,7 @@ struct EditHabitView: View {
                     
                     Stepper(habit.completedTime > 1 ?
                             "Completed \(habit.completedTime) Times" : "Completed \(habit.completedTime) Time",
-                            value: $habits.items[index].completedTime, in: 0...1000)
+                            value: $habits.habitsActivity[index].completedTime, in: 0...1000)
                 }
                 .scrollContentBackground(.hidden)
                 .frame(height: 250)
