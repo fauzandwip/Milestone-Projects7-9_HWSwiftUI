@@ -11,7 +11,7 @@ import SwiftUI
 struct Habit_TrackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HabitsView()
         }
     }
 }

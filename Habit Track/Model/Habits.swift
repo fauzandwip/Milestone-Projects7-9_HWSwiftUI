@@ -13,4 +13,12 @@ class Habits: ObservableObject {
         Habit(habitName: "Morning Wake", description: "Wake up at 3 am, then salat tahajud, pray, study and salat subuh", completedTime: 2)
     ]
 //    @Published var items = [Habit]()
+    
+    func getIndex(habitID: UUID) -> Int {
+        if let index = items.firstIndex(where: { $0.id == habitID }) {
+            return index
+        } else {
+            return 0
+        }
+    }
 }

@@ -11,5 +11,5 @@ struct Habit: Identifiable {
     var id = UUID()
     let habitName: String
     let description: String
-    let completedTime: Int
+    var completedTime: Int
 }

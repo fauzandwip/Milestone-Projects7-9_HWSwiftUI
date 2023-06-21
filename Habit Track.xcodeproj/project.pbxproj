@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B25657B2A429C810011151A /* EditHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25657A2A429C810011151A /* EditHabitView.swift */; };
+		7B25657D2A42ABFF0011151A /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B25657C2A42ABFF0011151A /* Modifier.swift */; };
 		7B4BD47E2A41B52600BDE2AD /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */; };
 		7B4C7DB62A39E30900C4F3C5 /* Habit_TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */; };
-		7B4C7DB82A39E30900C4F3C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */; };
+		7B4C7DB82A39E30900C4F3C5 /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB72A39E30900C4F3C5 /* HabitsView.swift */; };
 		7B4C7DBA2A39E30A00C4F3C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4C7DB92A39E30A00C4F3C5 /* Assets.xcassets */; };
 		7B4C7DBD2A39E30A00C4F3C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B4C7DBC2A39E30A00C4F3C5 /* Preview Assets.xcassets */; };
 		7B4C7DC42A39E3C300C4F3C5 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4C7DC32A39E3C300C4F3C5 /* Habit.swift */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B25657A2A429C810011151A /* EditHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHabitView.swift; sourceTree = "<group>"; };
+		7B25657C2A42ABFF0011151A /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
 		7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		7B4C7DB22A39E30900C4F3C5 /* Habit Track.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Track.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit_TrackApp.swift; sourceTree = "<group>"; };
-		7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B4C7DB72A39E30900C4F3C5 /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
 		7B4C7DB92A39E30A00C4F3C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B4C7DBC2A39E30A00C4F3C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B4C7DC32A39E3C300C4F3C5 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
@@ -41,8 +45,9 @@
 		7B4BD47C2A41B4FE00BDE2AD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7B4C7DB72A39E30900C4F3C5 /* ContentView.swift */,
+				7B4C7DB72A39E30900C4F3C5 /* HabitsView.swift */,
 				7B4BD47D2A41B52600BDE2AD /* AddHabitView.swift */,
+				7B25657A2A429C810011151A /* EditHabitView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -67,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4C7DB52A39E30900C4F3C5 /* Habit_TrackApp.swift */,
+				7B25657C2A42ABFF0011151A /* Modifier.swift */,
 				7B4C7DC52A39E3FA00C4F3C5 /* Model */,
 				7B4BD47C2A41B4FE00BDE2AD /* View */,
 				7B4C7DB92A39E30A00C4F3C5 /* Assets.xcassets */,
@@ -165,8 +171,10 @@
 				7B4C7DC42A39E3C300C4F3C5 /* Habit.swift in Sources */,
 				7BDB3B1D2A41EE8C0016C9DC /* Habits.swift in Sources */,
 				7B4BD47E2A41B52600BDE2AD /* AddHabitView.swift in Sources */,
-				7B4C7DB82A39E30900C4F3C5 /* ContentView.swift in Sources */,
+				7B4C7DB82A39E30900C4F3C5 /* HabitsView.swift in Sources */,
 				7B4C7DB62A39E30900C4F3C5 /* Habit_TrackApp.swift in Sources */,
+				7B25657B2A429C810011151A /* EditHabitView.swift in Sources */,
+				7B25657D2A42ABFF0011151A /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,29 +26,17 @@ struct AddHabitView: View {
                     }
                     .listRowSeparatorTint(.white)
                     .foregroundColor(.white)
-                    
-                    Stepper(completedTime > 1 ?
-                            "Completed \(completedTime) Times" : "Completed \(completedTime) Time"
-                            , value: $completedTime, in: 0...100)
                 }
                 .scrollContentBackground(.hidden)
-                .frame(height: 250)
+                .scrollDisabled(true)
+                .frame(height: 150)
                 
                 Button("SAVE") {
                     let habit = Habit(habitName: habitName, description: description, completedTime: completedTime)
                     habits.items.insert(habit, at: 0)
                     dismiss()
                 }
-                .foregroundColor(.primary)
-                .padding(.horizontal, 30)
-                .padding(.vertical, 15)
-                .background(.indigo)
-                .clipShape(RoundedRectangle(cornerRadius: 30))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 30)
-                        .stroke()
-                        .scale(1)
-                }
+                .saveButton()
                 
                 Spacer()
             }
@@ -63,6 +51,5 @@ struct AddHabitView_Previews: PreviewProvider {
     
     static var previews: some View {
         AddHabitView(habits: Habits())
-            .preferredColorScheme(.dark)
     }
 }
